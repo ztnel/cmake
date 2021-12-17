@@ -1,2 +1,2 @@
-# cmake
-cmake tutorial
+# CMake
+Basic cmake practice
