@@ -1,9 +1,13 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "ExponentConfig.h"
 
 int main(int argc, char* argv[]) {
   // expect 1 base argument and 1 exponent argument
+  printf("Exponent Version %d.%d\n",
+    Exponent_VERSION_MAJOR,
+    Exponent_VERSION_MINOR);
   if (argc < 2) {
     printf("Usage: ./exp 4 3");
     return 1;
