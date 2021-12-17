@@ -6,6 +6,9 @@ project(Exponent VERSION 1.0)
 configure_file(src/ExponentConfig.h.in src/ExponentConfig.h)
 
 # target_include_directories(. PUBLIC "${PROJECT_BINARY_DIR}")
+# specify the C standard in project build
+set(CMAKE_C_STANDARD 99)
+set(CMAKE_C_STANDARD_REQUIRED True)
 
 # add the executable
 add_executable(exp src/exp.c)
