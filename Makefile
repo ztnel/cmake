@@ -10,7 +10,7 @@ help: ## Print this help message and exit
 		 }' $(MAKEFILE_LIST)
 
 .PHONY: test 
-test: ## execute neuralink unittest suite
+test: ## execute test suite
 	@./scripts/test.sh
 
 .PHONY: lint
