@@ -1,3 +1,0 @@
-// the configured options and settings for Exponent
-#define Exponent_VERSION_MAJOR @Exponent_VERSION_MAJOR@
-#define Exponent_VERSION_MINOR @Exponent_VERSION_MINOR@
