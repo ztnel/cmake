@@ -21,6 +21,11 @@ config: ## setup cmake project
 build: ## build cmake project
 	@./scripts/build.sh
 
+
+.PHONY: test 
+test: ## test cmake project
+	@./scripts/test.sh
+
 .PHONY: install 
 install: ## install cmake project
 	@./scripts/install.sh

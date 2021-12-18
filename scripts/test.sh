@@ -11,4 +11,6 @@ handler () {
 }
 
 printf "%b" "${OKB}Executing unittest suite${NC}\n"
+cd build
+ctest -V
 printf "%b" "${OKG} ✓ ${NC} Pass\n"

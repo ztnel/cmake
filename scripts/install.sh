@@ -12,5 +12,5 @@ handler () {
 
 printf "%b" "${OKB}Building project${NC}\n"
 cd build || exit 1
-cmake --install . --prefix "/Users/christiansargusingh/Projects/cmake"
+cmake --install .
 printf "%b" "${OKG} ✓ ${NC} complete\n"
