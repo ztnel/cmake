@@ -1,1 +1,4 @@
 add_library(include mysqrt.c)
+target_include_directories(include INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
+install(TARGETS include DESTINATION lib)
+install(FILES MathFunctions.h DESTINATION include)

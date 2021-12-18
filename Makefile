@@ -9,10 +9,6 @@ help: ## Print this help message and exit
 			printf "  %-30s %s\n", $$1, $$NF \
 		 }' $(MAKEFILE_LIST)
 
-.PHONY: test 
-test: ## execute test suite
-	@./scripts/test.sh
-
 .PHONY: lint
 lint: ## cpplint codebase following google standards
 	@./scripts/lint.sh
@@ -25,9 +21,9 @@ config: ## setup cmake project
 build: ## build cmake project
 	@./scripts/build.sh
 
-.PHONY: run 
-run: ## run code
-	@./build/Exponent
+.PHONY: install 
+install: ## install cmake project
+	@./scripts/install.sh
 
 .PHONY: clean
 clean: ## clean cmake project configuration and build

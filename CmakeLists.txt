@@ -8,7 +8,6 @@ configure_file(TutorialConfig.h.in src/TutorialConfig.h)
 if(USE_MYMATH)
   add_subdirectory(include)
   list(APPEND EXTRA_LIBS include)
-  list(APPEND EXTRA_INCLUDES "${PROJECT_SOURCE_DIR}/include")
 endif()
 
 
@@ -19,4 +18,6 @@ set(CMAKE_C_STANDARD_REQUIRED True)
 # add the executable
 add_executable(Tutorial src/tutorial.c)
 target_link_libraries(Tutorial PUBLIC ${EXTRA_LIBS})
-target_include_directories(Tutorial PUBLIC "${PROJECT_BINARY_DIR}" "${PROJECT_BINARY_DIR}/src" ${EXTRA_INCLUDES})
+target_include_directories(Tutorial PUBLIC "${PROJECT_BINARY_DIR}" "${PROJECT_BINARY_DIR}/src")
+install(TARGETS Tutorial DESTINATION bin)
+install(FILES "${PROJECT_BINARY_DIR}/src/TutorialConfig.h" DESTINATION include)
